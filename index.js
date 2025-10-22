@@ -10,13 +10,9 @@ const app = express();
 const port = process.env.PORT || 3001;
 app.use(express.json());
 // Middleware
-const corsOptions = {
-  origin:"https://expense-tracker-ytqd.onrender.com/",
-  optionsSuccessStatus: 200
-};
 
-app.use(cors(corsOptions));
 
+ app.use(cors({ origin: 'https://expense-tracker-ytqd.onrender.com' }));
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/expense", expenseRoutes);
