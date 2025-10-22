@@ -11,7 +11,7 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 // Middleware
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN,
+  origin:"https://expense-tracker-ytqd.onrender.com/",
   optionsSuccessStatus: 200
 };
 
